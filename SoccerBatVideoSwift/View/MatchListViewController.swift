@@ -53,6 +53,12 @@ class MatchListViewController: UIViewController, View {
                 self?.updateTableView(with: feedData)
             })
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .map { Reactor.Action.selectMatch($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
     }
     
     func setupUI() {
