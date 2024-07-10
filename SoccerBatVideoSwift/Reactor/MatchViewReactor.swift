@@ -22,11 +22,12 @@ class MatchViewReactor : Reactor {
     
     enum Mutation {
         case loadJson([FeedData?])
-        case goToDetailMatch
+        case returnToDetailMatchFeed(IndexPath)
     }
     
     struct State {
         var feedDatas: [FeedData?] = []
+        var selectedMatchFeed : FeedData?
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
@@ -38,7 +39,7 @@ class MatchViewReactor : Reactor {
                 }
             
         case .selectMatch(let index):
-            return Observable<Mutation>.just(.goToDetailMatch)
+            return Observable<Mutation>.just(.returnToDetailMatchFeed(index))
         }
     }
     
@@ -47,8 +48,9 @@ class MatchViewReactor : Reactor {
         switch mutation{
         case .loadJson(let feedDatas) :
             newState.feedDatas = feedDatas
-        case .goToDetailMatch :
-            print("gotoDetail")
+        case .returnToDetailMatchFeed(let index) :
+            newState.selectedMatchFeed = newState.feedDatas[index.section]
+            print("gotoDetail", newState.selectedMatchFeed)
         }
         return newState
     }

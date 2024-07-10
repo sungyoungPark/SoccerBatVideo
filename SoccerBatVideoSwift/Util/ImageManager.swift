@@ -12,7 +12,7 @@ class ImageManager {
     
     static let shared = ImageManager()
     
-    func setImage(link : String, completion : @escaping (UIImage?) -> Void) {
+    func setImage(link : String, size : CGSize, completion : @escaping (UIImage?) -> Void) {
         
         guard let url = URL(string: link) else  {
             return
@@ -23,7 +23,7 @@ class ImageManager {
                 let data = try Data(contentsOf: url)
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
-                    completion(image)
+                    completion(image?.resized(to: size))
                 }
             }
             catch{
@@ -36,5 +36,14 @@ class ImageManager {
         
     }
     
-    
+
+}
+
+extension UIImage {
+    func resized(to size: CGSize) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { _ in
+            self.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
 }

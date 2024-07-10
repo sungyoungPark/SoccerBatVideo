@@ -20,6 +20,8 @@ class MatchListViewController: UIViewController, View {
     let tableView : UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
+        tableView.estimatedRowHeight = 80
+        
         return tableView
     }()
     
@@ -74,15 +76,16 @@ class MatchListViewController: UIViewController, View {
     }
     
     func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MatchFeedViewCell.self, forCellReuseIdentifier: "MatchFeedcell")
         
         dataSource = DataSource(tableView: tableView) { tableView, indexPath, item in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MatchFeedcell", for: indexPath) as? MatchFeedViewCell
             print("item --",item!.title)
             
             guard let item = item else {return cell }
             
-            cell.textLabel?.text = item.title
+            cell?.configure(with: item)
+            //cell.textLabel?.text = item.title
         
             return cell
         }

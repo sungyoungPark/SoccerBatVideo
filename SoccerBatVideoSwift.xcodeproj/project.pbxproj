@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3178F826E5051D00718494 /* ClassTableViewCell.swift */; };
 		5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */; };
 		5B625FD326E3DA6200E9DB14 /* KmoocListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */; };
 		5B625FD826E3DA6300E9DB14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B625FD726E3DA6300E9DB14 /* Assets.xcassets */; };
@@ -17,16 +16,13 @@
 		5BDBA67E2C3D863A002592BA /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBA67D2C3D8639002592BA /* FeedData.swift */; };
 		5BDBA6802C3D8A36002592BA /* MatchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBA67F2C3D8A36002592BA /* MatchListViewController.swift */; };
 		5BE95AA126E9DDC400AE6ACC /* JsonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE95AA026E9DDC400AE6ACC /* JsonManager.swift */; };
-		5BEFEE7C26EB1FA400076DE0 /* KmoocListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFEE7B26EB1FA400076DE0 /* KmoocListViewModel.swift */; };
-		5BEFEE8126EB201800076DE0 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFEE8026EB201800076DE0 /* Class.swift */; };
-		5BEFEE8826EB2A5B00076DE0 /* ClassList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEFEE8726EB2A5B00076DE0 /* ClassList.swift */; };
+		5BF21C272C3ED56F00BFA345 /* MatchFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF21C262C3ED56F00BFA345 /* MatchFeedViewCell.swift */; };
 		AB963CBD60DF14A1D1FCF70F /* Pods_SoccerBatVideoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD047C122F5BA4886A670012 /* Pods_SoccerBatVideoSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C2A3A8FBA157C320DD64A68 /* Pods-SoccerBatVideoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerBatVideoSwift.debug.xcconfig"; path = "Target Support Files/Pods-SoccerBatVideoSwift/Pods-SoccerBatVideoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		552E6553096C6B7F43E74795 /* Pods-SoccerBatVideoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerBatVideoSwift.release.xcconfig"; path = "Target Support Files/Pods-SoccerBatVideoSwift/Pods-SoccerBatVideoSwift.release.xcconfig"; sourceTree = "<group>"; };
-		5B3178F826E5051D00718494 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		5B625FCB26E3DA6200E9DB14 /* SoccerBatVideoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerBatVideoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmoocListViewController.swift; sourceTree = "<group>"; };
@@ -38,9 +34,7 @@
 		5BDBA67D2C3D8639002592BA /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 		5BDBA67F2C3D8A36002592BA /* MatchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewController.swift; sourceTree = "<group>"; };
 		5BE95AA026E9DDC400AE6ACC /* JsonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonManager.swift; sourceTree = "<group>"; };
-		5BEFEE7B26EB1FA400076DE0 /* KmoocListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmoocListViewModel.swift; sourceTree = "<group>"; };
-		5BEFEE8026EB201800076DE0 /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
-		5BEFEE8726EB2A5B00076DE0 /* ClassList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassList.swift; sourceTree = "<group>"; };
+		5BF21C262C3ED56F00BFA345 /* MatchFeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchFeedViewCell.swift; sourceTree = "<group>"; };
 		BD047C122F5BA4886A670012 /* Pods_SoccerBatVideoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoccerBatVideoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,7 +113,6 @@
 		5BEFEE7926EB1F8600076DE0 /* Reactor */ = {
 			isa = PBXGroup;
 			children = (
-				5BEFEE7B26EB1FA400076DE0 /* KmoocListViewModel.swift */,
 				5BDBA67B2C3D7D43002592BA /* MatchViewReactor.swift */,
 			);
 			path = Reactor;
@@ -128,8 +121,6 @@
 		5BEFEE7F26EB200800076DE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5BEFEE8026EB201800076DE0 /* Class.swift */,
-				5BEFEE8726EB2A5B00076DE0 /* ClassList.swift */,
 				5BDBA67D2C3D8639002592BA /* FeedData.swift */,
 			);
 			path = Model;
@@ -138,7 +129,7 @@
 		5BEFEE8A26EB480F00076DE0 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5B3178F826E5051D00718494 /* ClassTableViewCell.swift */,
+				5BF21C262C3ED56F00BFA345 /* MatchFeedViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -266,16 +257,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDBA67E2C3D863A002592BA /* FeedData.swift in Sources */,
-				5BEFEE8126EB201800076DE0 /* Class.swift in Sources */,
 				5B625FD326E3DA6200E9DB14 /* KmoocListViewController.swift in Sources */,
-				5BEFEE8826EB2A5B00076DE0 /* ClassList.swift in Sources */,
 				5BDBA67C2C3D7D43002592BA /* MatchViewReactor.swift in Sources */,
 				5B83F82726EBA0B500AE3598 /* ImageManager.swift in Sources */,
 				5BE95AA126E9DDC400AE6ACC /* JsonManager.swift in Sources */,
 				5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */,
+				5BF21C272C3ED56F00BFA345 /* MatchFeedViewCell.swift in Sources */,
 				5BDBA6802C3D8A36002592BA /* MatchListViewController.swift in Sources */,
-				5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */,
-				5BEFEE7C26EB1FA400076DE0 /* KmoocListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
