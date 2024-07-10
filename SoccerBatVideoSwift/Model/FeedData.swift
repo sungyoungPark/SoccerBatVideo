@@ -9,8 +9,9 @@
 
 import Foundation
 
-struct FeedData : Codable {
+struct FeedData : Codable, Hashable, Equatable {
     
+    var uuid = UUID()
     var title : String
     var competition : String
     var matchviewUrl : String
@@ -21,4 +22,11 @@ struct FeedData : Codable {
         case title, competition, matchviewUrl, thumbnail
     }
     
+//    init(from decoder: Decoder) throws {
+//        let values = try decoder.container(keyedBy: CodingKeys.self)
+//        title = (try? values.decode(String.self, forKey: .title)) ?? nil
+//        competition = (try? values.decode(String.self, forKey: .competition)) ?? nil
+//        matchviewUrl = (try? values.decode(String.self, forKey: .registerTime)) ?? nil
+//        thumbnail = (try? values.decode(String.self, forKey: .imageUrl)) ?? nil
+//    }
 }

@@ -24,7 +24,7 @@ class MatchViewReactor : Reactor {
     }
     
     struct State {
-        var isUpdate : Bool = false
+        var feedDatas: [FeedData?] = []
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
@@ -32,7 +32,7 @@ class MatchViewReactor : Reactor {
         case .listUp:
             return JsonManager.shared.getJson2()
                 .map { data in
-                    print(data.count)
+                  
                     return .loadJson(data)
                 }
             
@@ -42,8 +42,8 @@ class MatchViewReactor : Reactor {
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation{
-        case.loadJson :
-            print("load")
+        case .loadJson(let feedDatas) :
+            newState.feedDatas = feedDatas
         }
         return newState
     }

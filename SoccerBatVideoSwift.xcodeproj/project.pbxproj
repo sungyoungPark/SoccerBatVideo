@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B1F83522764FEC70065DD81 /* KmoocDetailCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1F83512764FEC70065DD81 /* KmoocDetailCourseViewController.swift */; };
 		5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3178F826E5051D00718494 /* ClassTableViewCell.swift */; };
 		5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */; };
 		5B625FD326E3DA6200E9DB14 /* KmoocListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */; };
@@ -27,7 +26,6 @@
 /* Begin PBXFileReference section */
 		3C2A3A8FBA157C320DD64A68 /* Pods-SoccerBatVideoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerBatVideoSwift.debug.xcconfig"; path = "Target Support Files/Pods-SoccerBatVideoSwift/Pods-SoccerBatVideoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		552E6553096C6B7F43E74795 /* Pods-SoccerBatVideoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoccerBatVideoSwift.release.xcconfig"; path = "Target Support Files/Pods-SoccerBatVideoSwift/Pods-SoccerBatVideoSwift.release.xcconfig"; sourceTree = "<group>"; };
-		5B1F83512764FEC70065DD81 /* KmoocDetailCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KmoocDetailCourseViewController.swift; sourceTree = "<group>"; };
 		5B3178F826E5051D00718494 /* ClassTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassTableViewCell.swift; sourceTree = "<group>"; };
 		5B625FCB26E3DA6200E9DB14 /* SoccerBatVideoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoccerBatVideoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			children = (
 				5BDBA67F2C3D8A36002592BA /* MatchListViewController.swift */,
 				5B625FD226E3DA6200E9DB14 /* KmoocListViewController.swift */,
-				5B1F83512764FEC70065DD81 /* KmoocDetailCourseViewController.swift */,
 				5BEFEE8A26EB480F00076DE0 /* Cell */,
 			);
 			path = View;
@@ -109,7 +106,7 @@
 			children = (
 				5BEFEE8B26EB482000076DE0 /* Util */,
 				5BEFEE7F26EB200800076DE0 /* Model */,
-				5BEFEE7926EB1F8600076DE0 /* ViewModel */,
+				5BEFEE7926EB1F8600076DE0 /* Reactor */,
 				5B3178F726E504F800718494 /* View */,
 				5B625FCE26E3DA6200E9DB14 /* AppDelegate.swift */,
 				5B625FD726E3DA6300E9DB14 /* Assets.xcassets */,
@@ -119,13 +116,13 @@
 			path = SoccerBatVideoSwift;
 			sourceTree = "<group>";
 		};
-		5BEFEE7926EB1F8600076DE0 /* ViewModel */ = {
+		5BEFEE7926EB1F8600076DE0 /* Reactor */ = {
 			isa = PBXGroup;
 			children = (
 				5BEFEE7B26EB1FA400076DE0 /* KmoocListViewModel.swift */,
 				5BDBA67B2C3D7D43002592BA /* MatchViewReactor.swift */,
 			);
-			path = ViewModel;
+			path = Reactor;
 			sourceTree = "<group>";
 		};
 		5BEFEE7F26EB200800076DE0 /* Model */ = {
@@ -277,7 +274,6 @@
 				5BE95AA126E9DDC400AE6ACC /* JsonManager.swift in Sources */,
 				5B625FCF26E3DA6200E9DB14 /* AppDelegate.swift in Sources */,
 				5BDBA6802C3D8A36002592BA /* MatchListViewController.swift in Sources */,
-				5B1F83522764FEC70065DD81 /* KmoocDetailCourseViewController.swift in Sources */,
 				5B3178F926E5051D00718494 /* ClassTableViewCell.swift in Sources */,
 				5BEFEE7C26EB1FA400076DE0 /* KmoocListViewModel.swift in Sources */,
 			);
@@ -422,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VDFGK9GV66;
 				INFOPLIST_FILE = SoccerBatVideoSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VDFGK9GV66;
 				INFOPLIST_FILE = SoccerBatVideoSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -61,10 +61,7 @@ class KmoocListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellClass = viewModel.indexClass(indexPath: indexPath)
-       
     
-        let vc = KmoocDetailCourseViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     
