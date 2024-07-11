@@ -50,7 +50,6 @@ class MatchViewReactor : Reactor {
             newState.feedDatas = feedDatas
         case .returnToDetailMatchFeed(let index) :
             newState.selectedMatchFeed = newState.feedDatas[index.section]
-            print("gotoDetail", newState.selectedMatchFeed)
         }
         return newState
     }

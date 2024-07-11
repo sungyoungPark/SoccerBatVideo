@@ -17,6 +17,8 @@ class MatchListViewController: UIViewController, View {
     
     var disposeBag: DisposeBag = DisposeBag()
     
+    weak var delegate: MyViewControllerDelegate?
+    
     let tableView : UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
@@ -59,6 +61,14 @@ class MatchListViewController: UIViewController, View {
         tableView.rx.itemSelected
             .map { Reactor.Action.selectMatch($0) }
             .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        reactor.state
+            .map {$0.selectedMatchFeed }
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] feedData in
+                self?.delegate?.myViewControllerDidRequestNavigation(with: feedData)
+            })
             .disposed(by: disposeBag)
         
     }
