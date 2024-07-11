@@ -104,7 +104,6 @@ class MatchListViewController: UIViewController, View {
     func updateTableView(with data: [FeedData?]) {
           var snapshot = Snapshot()
           snapshot.appendSections([0])
-            print("Data ---",data)
           snapshot.appendItems(data)
           dataSource.apply(snapshot, animatingDifferences: false)
       }

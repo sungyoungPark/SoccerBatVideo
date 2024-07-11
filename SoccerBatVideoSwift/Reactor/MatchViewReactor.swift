@@ -49,7 +49,7 @@ class MatchViewReactor : Reactor {
         case .loadJson(let feedDatas) :
             newState.feedDatas = feedDatas
         case .returnToDetailMatchFeed(let index) :
-            newState.selectedMatchFeed = newState.feedDatas[index.section]
+            newState.selectedMatchFeed = newState.feedDatas[index.row]
         }
         return newState
     }
