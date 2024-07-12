@@ -23,11 +23,11 @@ class DetailMatchViewController: UIViewController, View {
         stackView.distribution = .fill
         stackView.alignment = .leading
         stackView.spacing = 10
-        stackView.backgroundColor = .yellow
+        stackView.backgroundColor = .white
         return stackView
     }()
     
-    private let videoWebView : WKWebView = {
+    let videoWebView : WKWebView = {
         let webView = WKWebView()
         
         return webView
@@ -47,9 +47,11 @@ class DetailMatchViewController: UIViewController, View {
         }
         
         mainStackView.addArrangedSubview(videoWebView)
+        
+        let height = UIScreen.main.bounds.width / 4 * 3
         videoWebView.snp.makeConstraints { make in
             make.width.equalToSuperview()
-            make.height.equalTo(300)
+            make.height.equalTo(height)
         }
         
     }
@@ -57,13 +59,20 @@ class DetailMatchViewController: UIViewController, View {
     
     func bind(reactor: DetailMatchReactor) {
         reactor.state
-            .map { $0.matchFeedData }
-            .bind { feedData in
-                guard let feeData = feedData else { return }
-                guard let video = feeData.videos.first else { return }
-                self.videoWebView.loadHTMLString(video.embed, baseURL: nil)
-            }
+            .map { $0.matchFeedData?.videos.first?.embed }
+            .distinctUntilChanged()
+            .compactMap { $0 }
+            .bind(to: rx.loadHtmlString)
             .disposed(by: disposeBag)
     }
 
+}
+
+
+extension Reactive where Base: DetailMatchViewController {
+    var loadHtmlString : Binder<String> {
+        return Binder(self.base) { viewController, htmlString in
+            viewController.videoWebView.loadHTMLString(htmlString, baseURL: nil)
+        }
+    }
 }

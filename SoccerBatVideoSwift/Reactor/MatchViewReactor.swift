@@ -39,7 +39,7 @@ class MatchViewReactor : Reactor {
                 }
             
         case .selectMatch(let index):
-            return Observable<Mutation>.just(.returnToDetailMatchFeed(index))
+            return Observable.just(.returnToDetailMatchFeed(index))
         }
     }
     
