@@ -5,3 +5,5 @@
 - 4.사용한 Skill 또는 지식: MVVM 패턴, ReactorKit, RxSwift, Diffable dataSource, Snapkit.
 
 ## ■ 앱 실행 이미지
+
+![KakaoTalk_20240714_020739644-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/d948f42a-41ab-4a74-b2b5-ca41d99fddb4)
